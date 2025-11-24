@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Conectar ao MongoDB
-const DATABASE_URL = "mongodb+srv://Bea:ozngl7aoEphQws3w@users.wvzhq.mongodb.net/Users?retryWrites=true&w=majority&appName=Users";
+const DATABASE_URL = "";
 mongoose.connect(DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Conectado ao MongoDB"))
     .catch(err => console.log("Erro de conexão:", err));
@@ -79,3 +79,4 @@ app.get('/api/movies/:userId', async (req, res) => {
 app.listen(5000, () => {
     console.log('Servidor rodando na porta 5000');
 });
+
